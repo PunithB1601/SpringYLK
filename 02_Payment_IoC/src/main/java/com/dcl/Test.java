@@ -10,10 +10,7 @@ public class Test {
 		
 		ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
 		BillGenerator bg1=context.getBean(BillGenerator.class);
-		System.out.println(bg1.hashCode());
-		
-		BillGenerator bg2=context.getBean(BillGenerator.class);
-		System.out.println(bg2.hashCode());
+		bg1.generateBill();
 		
 	}
 

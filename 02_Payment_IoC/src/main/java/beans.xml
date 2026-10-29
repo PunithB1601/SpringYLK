@@ -3,10 +3,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	<bean id="bill" class="com.dcl.BillGenerator" scope="prototype">
-		<!--  constructor-arg ref="debit"></constructor-arg>-->
-		<!--  property name="payment" ref="credit"></property>-->
+	<bean id="bill" class="com.dcl.BillGenerator" autowire="constructor">
 	</bean>
 	<bean id="credit" class="com.dcl.CreditCard"></bean>
-	<bean id="debit" class="com.dcl.DebitCard"></bean>
+	<bean id="debit" class="com.dcl.DebitCard"  primary="true"></bean>
 </beans>
