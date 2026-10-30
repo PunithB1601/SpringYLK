@@ -1,8 +1,10 @@
 package com.dcl;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("district")
+@Primary
 public class District implements TicketBooking {
 
 	public District() {

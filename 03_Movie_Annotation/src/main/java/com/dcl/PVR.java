@@ -2,7 +2,7 @@ package com.dcl;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("demo")
 public class PVR implements TicketBooking {
 
 	public PVR() {

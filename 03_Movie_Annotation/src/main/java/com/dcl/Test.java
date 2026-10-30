@@ -8,6 +8,8 @@ public class Test {
 	public static void main(String[] args) {
 		
 		ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
-		System.out.println("IoC container started");
+		Movie m=context.getBean(Movie.class);
+		m.watch();
+		//System.out.println("IoC container started");
 	}
 }

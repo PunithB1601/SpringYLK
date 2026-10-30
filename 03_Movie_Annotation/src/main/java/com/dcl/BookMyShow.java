@@ -2,7 +2,7 @@ package com.dcl;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("booking")
 public class BookMyShow implements TicketBooking {
 
 	public BookMyShow() {
