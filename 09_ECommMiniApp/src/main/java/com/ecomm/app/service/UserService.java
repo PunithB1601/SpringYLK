@@ -11,6 +11,6 @@ public interface UserService {
 	
 	public Role createRole(RoleCreationRequest request);
 	
-	
+	public User login(LoginRequest request);
 	
 }

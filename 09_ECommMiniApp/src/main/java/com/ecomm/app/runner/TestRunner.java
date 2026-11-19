@@ -7,6 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import com.ecomm.app.enums.RoleName;
+import com.ecomm.app.request.LoginRequest;
 import com.ecomm.app.request.RoleCreationRequest;
 import com.ecomm.app.request.UserRegisterRequest;
 import com.ecomm.app.service.UserService;
@@ -28,6 +29,8 @@ public class TestRunner implements CommandLineRunner{
 			System.out.println("1. CREATE ROLE");
 			System.out.println("2. CREATE USER");
 			System.out.println("3. EXIT");
+			System.out.println("4. ADMIN LOGIN");
+			System.out.println("5. USER LOGIN");
 			choice=sc.nextInt();
 			switch(choice) {
 
@@ -55,6 +58,18 @@ public class TestRunner implements CommandLineRunner{
 			case 3: {
 				System.out.println("Application closed");
 				break;
+			}
+			
+			case 4: {
+				LoginRequest request=new LoginRequest();
+				System.out.println("Enter the Email:");
+				request.setEmail(sc.next());
+				System.out.println("Enter the Password:");
+				request.setPassword(sc.next());
+				
+				
+				break;
+				
 			}
 			default: {
 				System.out.println("Invalid option");
