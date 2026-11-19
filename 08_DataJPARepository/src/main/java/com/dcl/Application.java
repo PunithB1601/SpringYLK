@@ -5,6 +5,7 @@ import java.util.Scanner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -29,15 +30,21 @@ public class Application {
 		//	repo.findAll(s).forEach(System.out::println);
 			
 	//Pagination
-			Integer pageNum=0;
+		/**	Integer pageNum=0;
 			do {
 			System.out.println("Enter the page Num");
 			pageNum=sc.nextInt();
 			PageRequest req=PageRequest.of(pageNum-1, 4,s);
 			repo.findAll(req).forEach(System.out::println);
 			}while(pageNum>0&&pageNum<7);
-		
-		
+	**/	
+			
+		//QueryByExample
+			Product p=new Product();
+			p.setBrand("Apple");
+			p.setPrice(10000.0);
+			Example<Product> qbe=Example.of(p);
+			repo.findAll(qbe).forEach(System.out::println);
 	
 	}
 
