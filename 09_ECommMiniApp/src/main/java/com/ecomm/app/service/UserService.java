@@ -2,6 +2,7 @@ package com.ecomm.app.service;
 
 import com.ecomm.app.entity.Role;
 import com.ecomm.app.entity.User;
+import com.ecomm.app.request.LoginRequest;
 import com.ecomm.app.request.RoleCreationRequest;
 import com.ecomm.app.request.UserRegisterRequest;
 

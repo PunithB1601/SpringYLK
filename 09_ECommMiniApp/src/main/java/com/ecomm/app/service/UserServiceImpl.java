@@ -98,7 +98,7 @@ public class UserServiceImpl implements UserService {
 		
 		//if role is user, call User.user()
 		
-		//return user obj
+		//return user ob
 		
 		return null;
 	}
